@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Top 10 movies</title>
+  <style>
+    body {
+      background: #1f1e1a;
+      font-family: sans-serif;
+      color: #fffede;
+      max-width: 42em;
+      margin: 0 auto 2em auto;
+    }
+    .buttons {
+      display: flex;
+      padding: .5em 0;
+    }
+    .btn {
+      cursor: pointer;
+      color: #7f969f;
+      padding: 0 10px;
+    }
+    .list {
+      position: relative;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 5% 25% 65%;
+      gap: 2.5%;
+      align-items: center;
+      position: absolute;
+      padding: 1em;
+      background: #1e1c19;
+      transition: transform .5s ease-in-out, opacity .5s ease-out, left .5s ease-in-out;
+    }
+    .rm {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #b79a86;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./src/app.js"></script>
+</body>
+</html>

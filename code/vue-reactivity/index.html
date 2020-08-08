@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mini Vue</title>
+</head>
+<body>
+  <div id="app">
+    <h1 v-on="{mouseenter:onEnter,mouseout:onOut}">enter & out</h1>
+    <h3 v-on:click="onClick">on click</h3>
+    <p v-html="msg1"></p>
+    <p v-html="msg2"></p>
+  </div>
+  <script src="./js/dep.js"></script>
+  <script src="./js/watcher.js"></script>
+  <script src="./js/compiler.js"></script>
+  <script src="./js/observer.js"></script>
+  <script src="./js/vue.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        msg1: 'Hello Vue One',
+        msg2: '<strong>Hello Vue Two</strong>',
+      },
+      methods:{
+        onClick:function(){
+            console.log('onClick')
+        },
+        onEnter:function(){
+            console.log("onEnter")
+        },
+        onOut:function(){
+            console.log("onOut")
+        },
+      }
+    })
+  </script>
+</body>
+</html>
